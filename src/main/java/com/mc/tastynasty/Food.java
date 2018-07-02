@@ -16,11 +16,22 @@ public class Food {
     private String description;
     private String imageURL;
 
+    @Transient
+    private String last5minutes;
+
     @OneToMany(mappedBy = "food")
     private List<Upvote> upvotes;
 
     @OneToMany(mappedBy = "food")
     private List<Downvote> downvotes;
+
+    public String getLast5minutes() {
+        return last5minutes;
+    }
+
+    public void setLast5minutes(String last5minutes) {
+        this.last5minutes = last5minutes;
+    }
 
     public int getUpvoteBigger() {
         return upvoteBigger;

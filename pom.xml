@@ -48,6 +48,14 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.cloudinary</groupId>
+			<artifactId>cloudinary-taglib</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.cloudinary</groupId>
+			<artifactId>cloudinary-http44</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>

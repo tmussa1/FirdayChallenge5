@@ -1,6 +1,7 @@
 package com.mc.tastynasty;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 public class Upvote {
@@ -11,6 +12,26 @@ public class Upvote {
 
     @ManyToOne
     private Food food;
+
+    private LocalDateTime votedAt;
+
+    private String tastyOrNasty;
+
+    public String getTastyOrNasty() {
+        return tastyOrNasty;
+    }
+
+    public void setTastyOrNasty(String tastyOrNasty) {
+        this.tastyOrNasty = tastyOrNasty;
+    }
+
+    public LocalDateTime getVotedAt() {
+        return votedAt;
+    }
+
+    public void setVotedAt(LocalDateTime votedAt) {
+        this.votedAt = votedAt;
+    }
 
     public long getId() {
         return id;
